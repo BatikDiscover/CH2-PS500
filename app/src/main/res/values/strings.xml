@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">BatikDiscover</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+
 
     <!-- login dan register -->
     <string name="email">Email</string>
@@ -12,6 +10,14 @@
     <string name="notRegister">Belum Punya Akun?</string>
     <string name="registerNavigation">Daftar Sekarang</string>
     <string name="loginButton">Login</string>
+
+
+    <!-- Bottom Navbar -->
+
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_comunity">Community</string>
+    <string name="title_product">Batik</string>
+    <string name="title_profile">Profile</string>
 
     <!-- Entry Activity -->
     <string name="heading1">Temukan Keragaman Batik Pada

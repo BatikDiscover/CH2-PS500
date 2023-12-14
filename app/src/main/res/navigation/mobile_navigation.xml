@@ -3,23 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_community">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.bangkit.batikdiscover.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_community"
+        android:name="com.bangkit.batikdiscover.ui.community.CommunityFragment"
+        android:label="@string/title_comunity" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.bangkit.batikdiscover.ui.dashboard.DashboardFragment"
+        android:name="com.bangkit.myapplication.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.bangkit.batikdiscover.ui.notifications.NotificationsFragment"
+        android:name="com.bangkit.myapplication.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
 </navigation>
