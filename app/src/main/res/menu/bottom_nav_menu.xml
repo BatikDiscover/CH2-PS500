@@ -11,15 +11,15 @@
         android:icon="@drawable/ic_comunity"
         android:title="@string/title_comunity" />
     <item
-        android:id=""
-        android:title="" />
+        android:title=""
+        android:enabled="true"/>
     <item
-        android:id="@+id/"
+        android:id="@+id/navigation_product"
         android:icon="@drawable/ic_product"
         android:title="@string/title_product" />
 
     <item
-        android:id="@+id/"
+        android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_profile"
         android:title="@string/title_profile" />
 
