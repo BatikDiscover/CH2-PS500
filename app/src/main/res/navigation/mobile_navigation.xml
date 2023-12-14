@@ -3,24 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_community">
-
+    app:startDestination="@+id/navigation_dashboard">
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.bangkit.batikdiscover.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/navigation_community"
+        android:name="com.bangkit.batikdiscover.ui.community.CommunityFragment"
+        android:label="@string/title_comunity" />
     <fragment
         android:id="@+id/navigation_product"
         android:name="com.bangkit.batikdiscover.ui.product.ProductFragment"
         android:label="@string/title_product"
         tools:layout="@layout/fragment_product" />
-    <fragment
-        android:id="@+id/navigation_community"
-        android:name="com.bangkit.batikdiscover.ui.community.CommunityFragment"
-        android:label="@string/title_comunity" />
+
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.bangkit.myapplication.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
+        android:id="@+id/navigation_scan"
+        android:name="com.bangkit.batikdiscover.ui.scan.ScanFragment"
+        android:label="@string/title_product" />
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.bangkit.batikdiscover.ui.profile.ProfileFragment"

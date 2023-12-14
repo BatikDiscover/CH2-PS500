@@ -11,8 +11,9 @@
         android:icon="@drawable/ic_comunity"
         android:title="@string/title_comunity" />
     <item
-        android:title=""
-        android:enabled="true"/>
+        android:id="@+id/navigation_scan"
+        android:icon="@drawable/ic_scan"
+        android:title="@string/title_scan" />
     <item
         android:id="@+id/navigation_product"
         android:icon="@drawable/ic_product"
