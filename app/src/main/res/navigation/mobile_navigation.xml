@@ -23,7 +23,7 @@
     <fragment
         android:id="@+id/navigation_scan"
         android:name="com.bangkit.batikdiscover.ui.scan.ScanFragment"
-        android:label="@string/title_product" />
+        android:label="@string/title_scan" />
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.bangkit.batikdiscover.ui.profile.ProfileFragment"

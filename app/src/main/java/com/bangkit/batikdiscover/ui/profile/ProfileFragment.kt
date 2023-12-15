@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bangkit.batikdiscover.databinding.FragmentProfileBinding
+import com.google.android.material.tabs.TabLayoutMediator
 
 class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
@@ -25,6 +26,19 @@ class ProfileFragment : Fragment() {
 
         // Initialize ViewModel
         profileViewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
+
+        // Setup ViewPager2 with tabs
+        val viewPager = binding.viewPager
+        val tabLayout = binding.tabs
+
+        viewPager.adapter = ProfilePagerAdapter(this)
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            when (position) {
+                0 -> tab.text = "My Favorite Batik"
+                1 -> tab.text = "My Events"
+                // Add more tabs if needed
+            }
+        }.attach()
 
         // TODO: Setup UI components and observe ViewModel data
 

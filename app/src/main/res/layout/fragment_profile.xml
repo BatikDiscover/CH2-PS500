@@ -45,22 +45,6 @@
                 android:orientation="horizontal"
                 android:padding="8dp">
 
-                <TextView
-                    android:id="@+id/textViewUsername"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/rounded"
-                    android:gravity="center"
-                    android:paddingStart="16dp"
-                    android:paddingTop="6dp"
-                    android:paddingEnd="16dp"
-                    android:paddingBottom="6dp"
-                    android:text="Username"
-                    android:textColor="?attr/colorOnPrimary"
-                    android:textSize="13sp"
-                    android:textStyle="italic|bold" />
-
                 <Button
                     android:id="@+id/favoriteButton"
                     android:layout_width="wrap_content"
@@ -73,7 +57,7 @@
                     android:paddingTop="6dp"
                     android:paddingEnd="16dp"
                     android:paddingBottom="6dp"
-                    android:text="Add to Favorite"
+                    android:text="Edit Profile"
                     android:textColor="?attr/colorOnPrimary"
                     android:textSize="10sp"
                     android:textStyle="bold" />
@@ -99,37 +83,7 @@
                 android:layout_marginTop="16dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="8dp">
-
-                <TextView
-                    android:id="@+id/textViewFollowers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="32dp"
-                    android:gravity="center"
-                    android:text="Followers:"
-                    android:textSize="14sp"
-                    android:verticalScrollbarPosition="defaultPosition" />
-
-                <TextView
-                    android:id="@+id/textViewFollowing"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="32dp"
-                    android:gravity="center"
-                    android:text="Following:"
-                    android:textSize="14sp"
-                    android:verticalScrollbarPosition="defaultPosition" />
-
-                <TextView
-                    android:id="@+id/textViewRepo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Public Repos:"
-                    android:textSize="14sp"
-                    android:verticalScrollbarPosition="defaultPosition" />
-            </LinearLayout>
+                android:padding="8dp"/>
 
             <LinearLayout
                 android:id="@+id/companyLayout"
@@ -140,13 +94,6 @@
                 android:layout_marginTop="16dp"
                 android:gravity="center"
                 android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:contentDescription="Company Icon"
-                    android:src="@drawable/ic_profile"
-                    app:tint="?attr/colorOnSecondary" />
 
                 <TextView
                     android:id="@+id/textViewCompany"
@@ -164,13 +111,6 @@
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
                 android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:contentDescription="Html URL Icon"
-                    android:src="@drawable/ic_profile"
-                    app:tint="?attr/colorOnSecondary" />
 
                 <TextView
                     android:id="@+id/textViewHtmlUrl"
