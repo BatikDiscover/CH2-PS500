@@ -3,5 +3,11 @@
     <item
         android:id="@+id/notification"
         android:icon="@drawable/ic_notification"
-        android:showAsAction="ifRoom" />
+        android:iconTint="@color/brown"
+        android:title="@string/title_product" />
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/ic_notification"
+        android:iconTint="@color/brown"
+        android:title="@string/title_product" />
 </menu>

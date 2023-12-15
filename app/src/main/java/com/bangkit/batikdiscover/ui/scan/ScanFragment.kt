@@ -12,29 +12,5 @@ import com.bangkit.batikdiscover.databinding.FragmentScanBinding
 import com.bangkit.batikdiscover.ui.profile.ProfileViewModel
 
 class ScanFragment : Fragment() {
-    private var _binding: FragmentScanBinding? = null
-    private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        val Scan =
-            ViewModelProvider(this).get(ScanViewModel::class.java)
-
-        _binding = FragmentScanBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textScan
-        Scan.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 }
