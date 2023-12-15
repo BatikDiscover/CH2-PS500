@@ -20,6 +20,12 @@
     <string name="title_product">Batik</string>
     <string name="title_profile">Profile</string>
 
+    <!-- Scan Activity -->
+
+    <string name="description_img">Tambahkan Gambar Yang Mau Kamu Scan</string>
+    <string name="gallery">Pilih Dari Galeri</string>
+    <string name="scan">Scan Menggunakan Kamera</string>
+    <string name="scan_now">Scan Sekarang</string>
     <!-- Entry Activity -->
     <string name="heading1">Temukan Keragaman Batik Pada
         Aplikasi Batik Discover.</string>
