@@ -5,7 +5,7 @@ const {
   ImageHeadersSchema,
 } = require("./schema");
 
-const ComunityValidator = {
+const communityValidator = {
   validatePostingPayload: (payload) => {
     const validationResult = PostingPayloadSchema.validate(payload);
     if (validationResult.error) {
@@ -28,4 +28,4 @@ const ComunityValidator = {
   },
 };
 
-module.exports = ComunityValidator;
+module.exports = communityValidator;

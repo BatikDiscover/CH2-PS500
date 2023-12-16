@@ -5,9 +5,9 @@ const ClientError = require("./exception/ClientError");
 const auth = require("./api/auth");
 const AuthValidator = require("./validator/auth");
 
-// plugin comunity
-const comunity = require("./api/comunity");
-const ComunityValidator = require("./validator/comunity");
+// plugin community
+const community = require("./api/community");
+const communityValidator = require("./validator/community");
 
 // plugin article
 const article = require("./api/article");
@@ -17,10 +17,6 @@ const event = require("./api/event");
 
 // plugin model
 const model = require("./api/ml-connector");
-
-//upload
-const upload = require("./api/upload");
-const UploadValidator = require("./validator/upload");
 
 const init = async () => {
   const server = Hapi.server({
@@ -41,9 +37,9 @@ const init = async () => {
       },
     },
     {
-      plugin: comunity,
+      plugin: community,
       options: {
-        validator: ComunityValidator,
+        validator: communityValidator,
       },
     },
     {

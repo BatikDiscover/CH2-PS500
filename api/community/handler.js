@@ -7,7 +7,7 @@ const {
   getDownloadURL,
 } = require("firebase/storage");
 const verifyToken = require("../token");
-class ComunityHandler {
+class communityHandler {
   constructor(validator) {
     this._validator = validator;
     autoBind(this);
@@ -253,4 +253,4 @@ class ComunityHandler {
   }
 }
 
-module.exports = ComunityHandler;
+module.exports = communityHandler;
