@@ -16,7 +16,7 @@ const article = require("./api/article");
 const event = require("./api/event");
 
 // plugin model
-const model = require("./api/model");
+const model = require("./api/ml-connector");
 
 //upload
 const upload = require("./api/upload");
