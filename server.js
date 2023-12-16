@@ -18,6 +18,10 @@ const event = require("./api/event");
 // plugin model
 const model = require("./api/model");
 
+//upload
+const upload = require("./api/upload");
+const UploadValidator = require("./validator/upload");
+
 const init = async () => {
   const server = Hapi.server({
     port: 8080,

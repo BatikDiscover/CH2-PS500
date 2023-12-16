@@ -1,5 +1,11 @@
 const autoBind = require("auto-bind");
 const { db } = require("../../config/firebase");
+const {
+  getStorage,
+  ref,
+  uploadBytesResumable,
+  getDownloadURL,
+} = require("firebase/storage");
 const verifyToken = require("../token");
 class ComunityHandler {
   constructor(validator) {
@@ -9,16 +15,31 @@ class ComunityHandler {
 
   // POST
   async addPostHandler(request, h) {
-    const { title, content, date } = request.payload;
+    const { title, content, image } = request.payload;
     const token = request.headers.authorization;
     const userId = await verifyToken(token);
+    const date = new Date().toISOString();
 
     this._validator.validatePostingPayload(request.payload);
+    //this._validator.validateImageHeaders(image.hapi.headers);
+
+    let imageUrl = "-";
+    if (image !== undefined) {
+      const meta = image.hapi;
+      const filename = +new Date() + meta.filename;
+      const storage = getStorage();
+      const imageRef = ref(storage, "postings/" + filename);
+
+      await uploadBytesResumable(imageRef, image._data);
+      imageUrl = await getDownloadURL(imageRef);
+    }
+
     const post = await db.collection("postings").add({
       title,
       content,
       date,
       userId,
+      imageUrl,
     });
 
     const response = h.response({
@@ -101,7 +122,8 @@ class ComunityHandler {
     const { id: postId } = request.params;
     const token = request.headers.authorization;
     const userId = await verifyToken(token);
-    const { content, date } = request.payload;
+    const { content } = request.payload;
+    const date = new Date().toISOString();
     this._validator.validateCommentPayload(request.payload);
 
     const comment = await db.collection("comments").add({

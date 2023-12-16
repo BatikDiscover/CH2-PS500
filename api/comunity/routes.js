@@ -4,6 +4,14 @@ const routes = (handler) => [
     method: "POST",
     path: "/post",
     handler: handler.addPostHandler,
+    options: {
+      payload: {
+        allow: "multipart/form-data",
+        multipart: true,
+        output: "stream",
+        maxBytes: 1000000,
+      },
+    },
   },
   {
     method: "GET",
