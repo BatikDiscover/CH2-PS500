@@ -30,6 +30,11 @@
             android:label="@string/app_name">
         </activity>
         <activity
+            android:name=".ui.setting.SettingsActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+        </activity>
+        <activity
             android:name=".ui.scan.CameraActivity"
             android:exported="true"
             android:theme="@style/Theme.Splash"

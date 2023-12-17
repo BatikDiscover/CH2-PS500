@@ -16,6 +16,7 @@
 
     <string name="title_dashboard">Dashboard</string>
     <string name="title_comunity">Community</string>
+    <string name="title_setting">Settings</string>
     <string name="title_scan">Scan</string>
     <string name="title_product">Batik</string>
     <string name="title_profile">Profile</string>
