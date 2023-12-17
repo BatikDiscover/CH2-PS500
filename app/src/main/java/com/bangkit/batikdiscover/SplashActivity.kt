@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import com.bangkit.batikdiscover.ui.login.EntryActivity // Sesuaikan dengan nama package dan kelas EntryActivity yang sesuai
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +15,7 @@ class SplashActivity : AppCompatActivity() {
         Handler().postDelayed({
             val intent = Intent(
                 this@SplashActivity,
-                MainActivity::class.java
+                EntryActivity::class.java
             )
             startActivity(intent)
             finish()

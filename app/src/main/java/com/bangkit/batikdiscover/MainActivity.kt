@@ -1,12 +1,14 @@
 package com.bangkit.batikdiscover
 
 import android.os.Bundle
+import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.bangkit.batikdiscover.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -29,7 +31,31 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_dashboard, R.id.navigation_community, R.id.navigation_scan, R.id.navigation_product, R.id.navigation_profile
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
+
+        // Set up the custom action bar
+        val customToolbar: Toolbar = findViewById(R.id.customToolbar)
+        setSupportActionBar(customToolbar)
+
+        // Ambil string dari resources untuk judul Toolbar
+        val toolbarTitle = getString(R.string.app_name)
+
+        // Set judul Toolbar
+        supportActionBar?.title = toolbarTitle
+
+        // Mendengarkan perubahan navigasi
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            // Update judul saat pindah halaman
+            val destinationTitle = when (destination.id) {
+                R.id.navigation_dashboard -> getString(R.string.title_dashboard)
+                R.id.navigation_community -> getString(R.string.title_comunity)
+                R.id.navigation_scan -> getString(R.string.title_scan)
+                R.id.navigation_product -> getString(R.string.title_product)
+                R.id.navigation_profile -> getString(R.string.title_profile)
+                else -> getString(R.string.app_name)
+            }
+            supportActionBar?.title = destinationTitle
+        }
+
         navView.setupWithNavController(navController)
     }
 
@@ -39,16 +65,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle item selection based on the item ID
         when (item.itemId) {
-            R.id.event -> {
-                // Handle event menu item click
-                return true
-            }
-            R.id.article -> {
-                // Handle article menu item click
-                return true
-            }
             R.id.notification -> {
                 // Handle notification menu item click
                 return true
