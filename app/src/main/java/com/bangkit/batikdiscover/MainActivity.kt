@@ -1,7 +1,6 @@
 package com.bangkit.batikdiscover
 
 import android.os.Bundle
-import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
@@ -36,15 +35,13 @@ class MainActivity : AppCompatActivity() {
         val customToolbar: Toolbar = findViewById(R.id.customToolbar)
         setSupportActionBar(customToolbar)
 
-        // Ambil string dari resources untuk judul Toolbar
-        val toolbarTitle = getString(R.string.app_name)
+        // Set judul Toolbar using TextView
+        val toolbarTitleTextView: TextView = findViewById(R.id.toolbar_title)
 
-        // Set judul Toolbar
-        supportActionBar?.title = toolbarTitle
+        // Hide the default ActionBar title
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
-        // Mendengarkan perubahan navigasi
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            // Update judul saat pindah halaman
             val destinationTitle = when (destination.id) {
                 R.id.navigation_dashboard -> getString(R.string.title_dashboard)
                 R.id.navigation_community -> getString(R.string.title_comunity)
@@ -53,11 +50,13 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_profile -> getString(R.string.title_profile)
                 else -> getString(R.string.app_name)
             }
-            supportActionBar?.title = destinationTitle
+
+            toolbarTitleTextView.text = destinationTitle
         }
 
         navView.setupWithNavController(navController)
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
