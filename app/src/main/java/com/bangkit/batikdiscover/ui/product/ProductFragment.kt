@@ -7,9 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.bangkit.batikdiscover.databinding.FragmentDashboardBinding
 import com.bangkit.batikdiscover.databinding.FragmentProductBinding
-import com.bangkit.batikdiscover.ui.dashboard.DashboardViewModel
 
 class ProductFragment : Fragment() {
     private var _binding: FragmentProductBinding? = null
@@ -18,7 +16,7 @@ class ProductFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         val productViewModel =
             ViewModelProvider(this).get(ProductViewModel::class.java)
@@ -38,4 +36,4 @@ class ProductFragment : Fragment() {
         _binding = null
     }
 
-    }
+}

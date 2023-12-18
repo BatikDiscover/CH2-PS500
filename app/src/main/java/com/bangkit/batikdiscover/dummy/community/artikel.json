@@ -1,0 +1,62 @@
+[
+  {
+    "judul": "Mengenal Lebih Dekat Teknologi Blockchain",
+    "tanggal": "13-02-2024",
+    "deskripsi": "Blockchain adalah teknologi terkini yang mendasari cryptocurrency seperti Bitcoin. Artikel ini akan membahas konsep dasar, manfaat, dan potensi aplikasi blockchain di berbagai industri.",
+    "gambar": "@drawable/blockchain"
+  },
+  {
+    "judul": "Tips Efektif Mengelola Waktu untuk Mahasiswa",
+    "tanggal": "15-02-2024",
+    "deskripsi": "Mahasiswa seringkali dihadapkan pada tuntutan tugas, ujian, dan kegiatan ekstrakurikuler. Pelajari tips efektif dalam mengelola waktu agar dapat mencapai keseimbangan antara studi dan kehidupan pribadi.",
+    "gambar": "@drawable/time_management"
+  },
+  {
+    "judul": "Exploring the Wonders of Artificial Intelligence",
+    "tanggal": "17-02-2024",
+    "deskripsi": "Artificial Intelligence (AI) has revolutionized various industries. This article delves into the wonders of AI, its applications, and its impact on the future.",
+    "gambar": "@drawable/artificial_intelligence"
+  },
+  {
+    "judul": "Healthy Eating Habits for a Busy Lifestyle",
+    "tanggal": "20-02-2024",
+    "deskripsi": "Maintaining a healthy diet is essential, especially for those with busy lifestyles. Discover practical tips and nutritious food choices to support a hectic schedule.",
+    "gambar": "@drawable/healthy_eating"
+  },
+  {
+    "judul": "The Rise of Virtual Reality in Entertainment",
+    "tanggal": "22-02-2024",
+    "deskripsi": "Virtual Reality (VR) has transformed the entertainment industry, offering immersive experiences. Learn about the evolution of VR technology and its impact on entertainment.",
+    "gambar": "@drawable/virtual_reality"
+  },
+  {
+    "judul": "Mastering the Basics of Mobile App Development",
+    "tanggal": "25-02-2024",
+    "deskripsi": "Mobile app development is a crucial skill in today's tech-driven world. This article provides an overview of the fundamental concepts and tools for aspiring developers.",
+    "gambar": "@drawable/mobile_app_development"
+  },
+  {
+    "judul": "The Art of Creative Writing: Tips for Aspiring Writers",
+    "tanggal": "28-02-2024",
+    "deskripsi": "Unlock your creative potential with these tips for aspiring writers. Explore techniques, overcome challenges, and embark on a journey to express yourself through words.",
+    "gambar": "@drawable/creative_writing"
+  },
+  {
+    "judul": "Understanding Sustainable Living: Eco-Friendly Practices",
+    "tanggal": "01-03-2024",
+    "deskripsi": "Embrace sustainable living with eco-friendly practices. This article explores simple yet impactful ways to reduce your ecological footprint and contribute to a healthier planet.",
+    "gambar": "@drawable/sustainable_living"
+  },
+  {
+    "judul": "The Fascinating World of Astrophysics",
+    "tanggal": "03-03-2024",
+    "deskripsi": "Dive into the mysteries of astrophysics, exploring celestial bodies, dark matter, and the fundamental laws governing the universe. Uncover the wonders of the cosmos.",
+    "gambar": "@drawable/astrophysics"
+  },
+  {
+    "judul": "Unlocking the Secrets of Machine Learning Algorithms",
+    "tanggal": "05-03-2024",
+    "deskripsi": "Machine learning algorithms are the backbone of artificial intelligence. Gain insights into how these algorithms work, their applications, and their impact on various industries.",
+    "gambar": "@drawable/machine_learning"
+  }
+]

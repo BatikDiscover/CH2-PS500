@@ -10,7 +10,6 @@ import androidx.appcompat.widget.Toolbar
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupWithNavController
 import com.bangkit.batikdiscover.databinding.ActivityMainBinding
 import com.bangkit.batikdiscover.ui.setting.SettingsActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -63,11 +62,13 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_community,
                 R.id.navigation_scan,
                 R.id.navigation_product,
-                R.id.navigation_profile -> {
+                R.id.navigation_profile,
+                -> {
                     // Perform fragment transaction here if needed
                     navController.navigate(menuItem.itemId)
                     true
                 }
+
                 else -> false
             }
         }

@@ -1,11 +1,11 @@
-<ScrollView xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:fillViewport="true"
     app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    app:layout_constraintTop_toTopOf="parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -29,10 +29,10 @@
                 android:id="@+id/searchView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 app:iconifiedByDefault="false"
                 app:queryBackground="@null"
-                app:queryHint="Cari Produk Sekarang"
-                android:gravity="center" />
+                app:queryHint="Cari Produk Sekarang" />
         </androidx.cardview.widget.CardView>
 
         <!-- Gambar di tengah -->
@@ -43,7 +43,7 @@
             android:layout_marginTop="44dp"
             android:orientation="vertical"
             app:layout_constraintTop_toBottomOf="@+id/cardViewSearch"
-            tools:layout_editor_absoluteX="0dp" >
+            tools:layout_editor_absoluteX="0dp">
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -80,11 +80,11 @@
 
             <!-- Icon dan teks -->
             <LinearLayout
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -111,9 +111,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="Article"
                         android:textColor="?attr/colorPrimary"
-                        android:textStyle="bold"
-                        android:text="Article" />
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <!-- Item 2 -->
@@ -129,16 +129,16 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:background="@drawable/circle_background"
-                        android:padding="12dp"
                         android:backgroundTint="@color/bluenew"
+                        android:padding="12dp"
                         android:src="@drawable/ic_notification_event" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="Events"
                         android:textColor="?attr/colorPrimary"
-                        android:textStyle="bold"
-                        android:text="Events" />
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <!-- Item 3 -->
@@ -154,16 +154,16 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:background="@drawable/circle_background"
-                        android:padding="12dp"
                         android:backgroundTint="@color/yellow"
+                        android:padding="12dp"
                         android:src="@drawable/ic_scan" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="Scan"
                         android:textColor="?attr/colorPrimary"
-                        android:textStyle="bold"
-                        android:text="Scan" />
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <!-- Item 4 -->
@@ -179,17 +179,17 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:background="@drawable/circle_background"
-                        android:padding="12dp"
                         android:backgroundTint="@color/red"
-                        android:tint="@color/white"
-                        android:src="@drawable/ic_comunity" />
+                        android:padding="12dp"
+                        android:src="@drawable/ic_comunity"
+                        android:tint="@color/white" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="Community"
                         android:textColor="?attr/colorPrimary"
-                        android:textStyle="bold"
-                        android:text="Community" />
+                        android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

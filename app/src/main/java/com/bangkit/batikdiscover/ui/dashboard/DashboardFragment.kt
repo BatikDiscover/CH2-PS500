@@ -20,7 +20,7 @@ class DashboardFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         val dashboardViewModel = ViewModelProvider(this).get(DashboardViewModel::class.java)
 
@@ -33,9 +33,12 @@ class DashboardFragment : Fragment() {
         val recyclerViewEvents: RecyclerView = binding.recyclerEvents
 
         // Set layout manager for each RecyclerView
-        recyclerViewHotFeature.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        recyclerViewBatikPilihan.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        recyclerViewEvents.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        recyclerViewHotFeature.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        recyclerViewBatikPilihan.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        recyclerViewEvents.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
         // Set click listeners for navigation
         binding.iconArticle.setOnClickListener {

@@ -3,8 +3,8 @@
     <corners android:radius="30dp" /> <!-- Sesuaikan radius sesuai keinginan -->
     <solid android:color="#E0E0E0" /> <!-- Sesuaikan warna background sesuai keinginan -->
     <padding
+        android:bottom="10dp"
         android:left="10dp"
         android:right="10dp"
-        android:top="10dp"
-        android:bottom="10dp" /> <!-- Sesuaikan padding sesuai keinginan -->
+        android:top="10dp" /> <!-- Sesuaikan padding sesuai keinginan -->
 </shape>

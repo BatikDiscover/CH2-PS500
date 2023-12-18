@@ -37,6 +37,7 @@ class SettingsActivity : AppCompatActivity() {
                 onBackPressed() // Handle back button press
                 true
             }
+
             else -> super.onOptionsItemSelected(item)
         }
     }

@@ -2,7 +2,6 @@
 
 package com.bangkit.batikdiscover.ui.scan
 
-import android.app.Activity.RESULT_OK
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -24,7 +23,7 @@ class ScanFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentScanBinding.inflate(inflater, container, false)
         val root: View = binding.root

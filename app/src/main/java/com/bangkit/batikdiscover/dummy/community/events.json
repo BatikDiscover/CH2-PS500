@@ -1,0 +1,62 @@
+[
+  {
+    "judul": "Hackathon 2024",
+    "tanggal": "13-02-2024",
+    "deskripsi": "Sertai Hackathon 2024 dan tunjukkan keahlian pengembangan perangkat lunak Anda. Hadiah menarik menanti para peserta. Jangan lewatkan kesempatan ini untuk berkolaborasi dan berinovasi!",
+    "gambar": "@drawable/hackathon"
+  },
+  {
+    "judul": "Seminar Teknologi Terkini",
+    "tanggal": "15-02-2024",
+    "deskripsi": "Ikuti seminar ini untuk mendapatkan wawasan tentang teknologi terkini, seperti kecerdasan buatan, pengembangan perangkat lunak, dan tren terbaru dalam dunia teknologi informasi.",
+    "gambar": "@drawable/seminar"
+  },
+  {
+    "judul": "Pameran Seni Lokal",
+    "tanggal": "17-02-2024",
+    "deskripsi": "Nikmati keindahan seni lokal dalam pameran ini. Dari lukisan hingga karya kerajinan tangan, acara ini memamerkan bakat seniman lokal. Dukung seni dan budaya!",
+    "gambar": "@drawable/art_exhibition"
+  },
+  {
+    "judul": "Kompetisi Desain Grafis",
+    "tanggal": "20-02-2024",
+    "deskripsi": "Ajukan kreativitas dan keahlian desain grafis Anda dalam kompetisi ini. Tema tahun ini adalah 'Inovasi Digital'. Bersainglah dengan desainer lain dan menangkan penghargaan!",
+    "gambar": "@drawable/graphic_design_competition"
+  },
+  {
+    "judul": "Pelatihan Keamanan Cyber",
+    "tanggal": "22-02-2024",
+    "deskripsi": "Perkuat pengetahuan Anda tentang keamanan cyber dalam pelatihan ini. Ahli keamanan cyber akan membagikan strategi terkini untuk melindungi data dan sistem Anda.",
+    "gambar": "@drawable/cyber_security_training"
+  },
+  {
+    "judul": "Festival Musik Lokal",
+    "tanggal": "25-02-2024",
+    "deskripsi": "Rasakan getaran musik lokal di festival ini. Dari genre tradisional hingga modern, acara ini menampilkan bakat-bakat musik lokal yang menarik perhatian.",
+    "gambar": "@drawable/music_festival"
+  },
+  {
+    "judul": "Kompetisi Robotika",
+    "tanggal": "28-02-2024",
+    "deskripsi": "Saksikan para peserta menghadirkan karya-karya robotik terbaik mereka. Kompetisi ini membuka ruang untuk inovasi dalam pengembangan robotika. Jangan lewatkan aksi seru!",
+    "gambar": "@drawable/robotics_competition"
+  },
+  {
+    "judul": "Pelatihan Keterampilan Soft",
+    "tanggal": "01-03-2024",
+    "deskripsi": "Perbaiki keterampilan soft Anda dalam pelatihan ini. Dari komunikasi hingga kepemimpinan, pelatihan ini akan membantu Anda menjadi profesional yang lebih efektif.",
+    "gambar": "@drawable/soft_skills_training"
+  },
+  {
+    "judul": "Turnamen Olahraga Kampus",
+    "tanggal": "03-03-2024",
+    "deskripsi": "Bergabunglah dalam semangat kompetisi olahraga kampus. Saksikan tim-tim terbaik bersaing untuk mendapatkan gelar juara. Sukses untuk semua peserta!",
+    "gambar": "@drawable/sports_tournament"
+  },
+  {
+    "judul": "Workshop Pengembangan Aplikasi Mobile",
+    "tanggal": "05-03-2024",
+    "deskripsi": "Pelajari dasar-dasar pengembangan aplikasi mobile dalam workshop ini. Dengan panduan praktis, Anda dapat mulai mengembangkan aplikasi mobile pertama Anda.",
+    "gambar": "@drawable/mobile_app_workshop"
+  }
+]

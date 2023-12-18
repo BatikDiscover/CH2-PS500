@@ -1,19 +1,11 @@
 <!-- res/layout/item_event.xml -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp">
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical">
 
     <ImageView
         android:id="@+id/iconEvents"
@@ -56,5 +48,4 @@
         app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toEndOf="@+id/iconEvents"
         app:layout_constraintTop_toBottomOf="@+id/judul_notif" />
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -55,13 +55,13 @@
         android:id="@+id/edtEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="12dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/rounded"
         android:hint="Masukkan Email"
         android:inputType="textEmailAddress"
-        android:background="@drawable/rounded"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -81,13 +81,13 @@
         android:id="@+id/edtPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="12dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/rounded"
         android:hint="Masukkan Password"
         android:inputType="textPassword"
-        android:background="@drawable/rounded"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -104,6 +104,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+
     <TextView
         android:id="@+id/txtRegister"
         android:layout_width="wrap_content"

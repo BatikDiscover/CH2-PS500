@@ -2,12 +2,7 @@ package com.bangkit.batikdiscover.data
 
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
-import retrofit2.http.GET
-import retrofit2.http.Header
-import retrofit2.http.Multipart
 import retrofit2.http.POST
-import retrofit2.http.Path
-import retrofit2.http.Query
 
 interface ApiService {
     @FormUrlEncoded
@@ -16,14 +11,14 @@ interface ApiService {
         @Field("firstName") firstName: String,
         @Field("lastName") lastName: String,
         @Field("email") email: String,
-        @Field("password") password: String
+        @Field("password") password: String,
     ): RegisterResponse
 
     @FormUrlEncoded
     @POST("login")
     suspend fun login(
         @Field("email") email: String,
-        @Field("password") password: String
+        @Field("password") password: String,
     ): LoginResponse
 
 //    @GET("event")

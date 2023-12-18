@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bangkit.batikdiscover.MainActivity
 import com.bangkit.batikdiscover.databinding.ActivityLoginBinding
-import com.bangkit.batikdiscover.ui.dashboard.DashboardFragment
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding

@@ -53,22 +53,39 @@ class CameraActivity : AppCompatActivity() {
     private fun requestCameraPermission() {
         val cameraPermission = Manifest.permission.CAMERA
 
-        if (ContextCompat.checkSelfPermission(this, cameraPermission) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, arrayOf(cameraPermission), CAMERA_PERMISSION_REQUEST_CODE)
+        if (ContextCompat.checkSelfPermission(
+                this,
+                cameraPermission
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(cameraPermission),
+                CAMERA_PERMISSION_REQUEST_CODE
+            )
         } else {
             startCamera()
         }
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray,
+    ) {
         when (requestCode) {
             CAMERA_PERMISSION_REQUEST_CODE -> {
                 if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     startCamera()
                 } else {
-                    Toast.makeText(this@CameraActivity, "Camera permission denied.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this@CameraActivity,
+                        "Camera permission denied.",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
+
             else -> super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         }
     }
