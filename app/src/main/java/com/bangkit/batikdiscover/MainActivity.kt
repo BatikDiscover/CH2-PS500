@@ -7,6 +7,7 @@ import android.view.MenuItem
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
@@ -17,6 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,8 +27,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val navView: BottomNavigationView = binding.navView
+        val customToolbar: Toolbar = findViewById(R.id.customToolbar)
+        setSupportActionBar(customToolbar)
+        val toolbarTitleTextView: TextView = findViewById(R.id.toolbar_title)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
-        val navController = findNavController(R.id.nav_host_fragment_activity_main)
+        navController = findNavController(R.id.nav_host_fragment_activity_main)
+
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_dashboard,
@@ -36,16 +43,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_profile
             )
         )
-
-        // Set up the custom action bar
-        val customToolbar: Toolbar = findViewById(R.id.customToolbar)
-        setSupportActionBar(customToolbar)
-
-        // Set judul Toolbar using TextView
-        val toolbarTitleTextView: TextView = findViewById(R.id.toolbar_title)
-
-        // Hide the default ActionBar title
-        supportActionBar?.setDisplayShowTitleEnabled(false)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             val destinationTitle = when (destination.id) {
@@ -60,9 +57,21 @@ class MainActivity : AppCompatActivity() {
             toolbarTitleTextView.text = destinationTitle
         }
 
-        navView.setupWithNavController(navController)
+        navView.setOnNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.navigation_dashboard,
+                R.id.navigation_community,
+                R.id.navigation_scan,
+                R.id.navigation_product,
+                R.id.navigation_profile -> {
+                    // Perform fragment transaction here if needed
+                    navController.navigate(menuItem.itemId)
+                    true
+                }
+                else -> false
+            }
+        }
     }
-
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
@@ -86,5 +95,4 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
-
 }

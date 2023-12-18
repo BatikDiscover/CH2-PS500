@@ -58,6 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:layout_marginTop="16dp"
+
             app:layout_constraintTop_toBottomOf="@+id/linearLayout"
             tools:layout_editor_absoluteX="0dp">
 
@@ -79,6 +80,8 @@
 
             <!-- Icon dan teks -->
             <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:layout_marginTop="30dp"

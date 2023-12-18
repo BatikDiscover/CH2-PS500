@@ -28,4 +28,16 @@
         android:id="@+id/navigation_profile"
         android:name="com.bangkit.batikdiscover.ui.profile.ProfileFragment"
         android:label="@string/title_profile" />
+
+
+    <fragment
+        android:id="@+id/navigation_artikel"
+        android:name="com.bangkit.batikdiscover.ui.article.ArticleFragment"
+        android:label="@string/article"
+        tools:layout="@layout/fragment_article" />
+    <fragment
+        android:id="@+id/navigtaion_events"
+        android:name="com.bangkit.batikdiscover.ui.event.EventFragment"
+        android:label="@string/events"
+        tools:layout="@layout/fragment_event" />
 </navigation>

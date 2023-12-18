@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bangkit.batikdiscover.R
 import com.bangkit.batikdiscover.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
@@ -20,8 +22,7 @@ class DashboardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
+        val dashboardViewModel = ViewModelProvider(this).get(DashboardViewModel::class.java)
 
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -36,10 +37,26 @@ class DashboardFragment : Fragment() {
         recyclerViewBatikPilihan.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         recyclerViewEvents.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
-//        // Set adapter for each RecyclerView
-//        recyclerViewHotFeature.adapter = HotFeatureAdapter() // Gantilah dengan nama adapter yang sesuai
-//        recyclerViewBatikPilihan.adapter = BatikPilihanAdapter() // Gantilah dengan nama adapter yang sesuai
-//        recyclerViewEvents.adapter = EventsAdapter() // Gantilah dengan nama adapter yang sesuai
+        // Set click listeners for navigation
+        binding.iconArticle.setOnClickListener {
+            // Navigasi ke halaman ArticleFragment
+            findNavController().navigate(R.id.navigation_artikel)
+        }
+
+        binding.iconEvents.setOnClickListener {
+            // Navigasi ke halaman EventFragment
+            findNavController().navigate(R.id.navigtaion_events)
+        }
+
+        binding.scan.setOnClickListener {
+            // Navigasi ke halaman ScanFragment
+            findNavController().navigate(R.id.navigation_scan)
+        }
+
+        binding.community.setOnClickListener {
+            // Navigasi ke halaman CommunityFragment
+            findNavController().navigate(R.id.navigation_community)
+        }
 
         return root
     }
