@@ -45,4 +45,9 @@
         android:name="com.bangkit.batikdiscover.ui.scan.DetailScanFragment"
         android:label="@string/scan_detail"
         tools:layout="@layout/fragment_result_scan" />
+    <fragment
+        android:id="@+id/navigation_product_detail"
+        android:name="com.bangkit.batikdiscover.ui.product.ProductDetailFragment"
+        android:label="@string/product_detail"
+        tools:layout="@layout/fragment_product_detail" />
 </navigation>
