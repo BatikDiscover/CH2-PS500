@@ -12,7 +12,6 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.bangkit.batikdiscover.databinding.ActivityMainBinding
 import com.bangkit.batikdiscover.ui.setting.SettingsActivity
-import com.bangkit.batikdiscover.ui.setting.SettingsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {

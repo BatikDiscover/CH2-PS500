@@ -27,6 +27,17 @@
     <string name="gallery">Pilih Dari Galeri</string>
     <string name="scan">Scan Menggunakan Kamera</string>
     <string name="scan_now">Scan Sekarang</string>
+
+    <!-- Dashboard Fragment -->
+
+    <string name="hot_feature">Hot Feature</string>
+    <string name="article">Article</string>
+    <string name="events">Events</string>
+    <string name="scan_hot">Scan</string>
+    <string name="community">Community</string>
+    <string name="batik_pilihan">Batik Pilihan</string>
+
+
     <!-- Entry Activity -->
     <string name="heading1">Temukan Keragaman Batik Pada
         Aplikasi Batik Discover.</string>
