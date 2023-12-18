@@ -7,33 +7,40 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.bangkit.batikdiscover.data.Batik
 import com.bangkit.batikdiscover.databinding.FragmentProductBinding
+import com.bangkit.batikdiscover.ui.dashboard.ProductAdapter
 
 class ProductFragment : Fragment() {
-    private var _binding: FragmentProductBinding? = null
-    private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?,
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View {
-        val productViewModel =
-            ViewModelProvider(this).get(ProductViewModel::class.java)
+        val binding = FragmentProductBinding.inflate(inflater, container, false)
 
-        _binding = FragmentProductBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        // Your list of dummy Batik data
+        val batikList = listOf(
+            Batik("Batik Parang Barong", "Motif Batik Parang Barong menggambarkan seekor barong, simbol dari keberanian dan kekuatan. Batik ini sering digunakan pada acara-acara adat dan memiliki warna-warna yang mencolok seperti merah, hitam, dan putih.", "batik_bedjo"),
+            Batik("Batik Tambal", "Batik Tambal memiliki ciri khas dengan motif yang menyerupai potongan kain yang disatukan kembali. Motif ini melambangkan kehidupan yang penuh liku-liku dan keunikan. Warna-warna yang umum digunakan adalah biru, coklat, dan hijau.", "batik_bedjo"),
+            Batik("Batik Parang Barong", "Motif Batik Parang Barong menggambarkan seekor barong, simbol dari keberanian dan kekuatan. Batik ini sering digunakan pada acara-acara adat dan memiliki warna-warna yang mencolok seperti merah, hitam, dan putih.", "batik_bedjo"),
+            Batik("Batik Tambal", "Batik Tambal memiliki ciri khas dengan motif yang menyerupai potongan kain yang disatukan kembali. Motif ini melambangkan kehidupan yang penuh liku-liku dan keunikan. Warna-warna yang umum digunakan adalah biru, coklat, dan hijau.", "batik_bedjo") ,
+                    Batik("Batik Parang Barong", "Motif Batik Parang Barong menggambarkan seekor barong, simbol dari keberanian dan kekuatan. Batik ini sering digunakan pada acara-acara adat dan memiliki warna-warna yang mencolok seperti merah, hitam, dan putih.", "batik_bedjo"),
+        Batik("Batik Tambal", "Batik Tambal memiliki ciri khas dengan motif yang menyerupai potongan kain yang disatukan kembali. Motif ini melambangkan kehidupan yang penuh liku-liku dan keunikan. Warna-warna yang umum digunakan adalah biru, coklat, dan hijau.", "batik_bedjo"),
+        Batik("Batik Parang Barong", "Motif Batik Parang Barong menggambarkan seekor barong, simbol dari keberanian dan kekuatan. Batik ini sering digunakan pada acara-acara adat dan memiliki warna-warna yang mencolok seperti merah, hitam, dan putih.", "batik_bedjo"),
+        Batik("Batik Tambal", "Batik Tambal memiliki ciri khas dengan motif yang menyerupai potongan kain yang disatukan kembali. Motif ini melambangkan kehidupan yang penuh liku-liku dan keunikan. Warna-warna yang umum digunakan adalah biru, coklat, dan hijau.", "batik_bedjo"),
+        Batik("Batik Parang Barong", "Motif Batik Parang Barong menggambarkan seekor barong, simbol dari keberanian dan kekuatan. Batik ini sering digunakan pada acara-acara adat dan memiliki warna-warna yang mencolok seperti merah, hitam, dan putih.", "batik_bedjo"),
+        Batik("Batik Tambal", "Batik Tambal memiliki ciri khas dengan motif yang menyerupai potongan kain yang disatukan kembali. Motif ini melambangkan kehidupan yang penuh liku-liku dan keunikan. Warna-warna yang umum digunakan adalah biru, coklat, dan hijau.", "batik_bedjo"),
+        Batik("Batik Parang Barong", "Motif Batik Parang Barong menggambarkan seekor barong, simbol dari keberanian dan kekuatan. Batik ini sering digunakan pada acara-acara adat dan memiliki warna-warna yang mencolok seperti merah, hitam, dan putih.", "batik_bedjo"),
+        Batik("Batik Tambal", "Batik Tambal memiliki ciri khas dengan motif yang menyerupai potongan kain yang disatukan kembali. Motif ini melambangkan kehidupan yang penuh liku-liku dan keunikan. Warna-warna yang umum digunakan adalah biru, coklat, dan hijau.", "batik_bedjo")
 
-        val textView: TextView = binding.textProduct
-        productViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+
+        )
+
+        // Set up RecyclerView adapter with the dummy data
+        val adapter = ProductAdapter(batikList)
+        binding.recyclerView.adapter = adapter
+
+        return binding.root
     }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
 }

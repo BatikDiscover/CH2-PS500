@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkit.batikdiscover.R
+import com.bangkit.batikdiscover.data.Batik
 import com.bangkit.batikdiscover.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
@@ -22,23 +23,28 @@ class DashboardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
+        // ViewModelProvider is used to create a ViewModel instance associated with the fragment
         val dashboardViewModel = ViewModelProvider(this).get(DashboardViewModel::class.java)
 
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        // Bind RecyclerViews
-        val recyclerViewHotFeature: RecyclerView = binding.recyclerView
-        val recyclerViewBatikPilihan: RecyclerView = binding.recyclerArticle
-        val recyclerViewEvents: RecyclerView = binding.recyclerEvents
+        // Create a list of Batik objects from the provided JSON data
+        val batikList = listOf(
+            Batik("Batik Parang Barong", "Motif Batik Parang Barong menggambarkan seekor barong, simbol dari keberanian dan kekuatan. Batik ini sering digunakan pada acara-acara adat dan memiliki warna-warna yang mencolok seperti merah, hitam, dan putih.", "batik_bedjo"),
+            Batik("Batik Tambal", "Batik Tambal memiliki ciri khas dengan motif yang menyerupai potongan kain yang disatukan kembali. Motif ini melambangkan kehidupan yang penuh liku-liku dan keunikan. Warna-warna yang umum digunakan adalah biru, coklat, dan hijau.", "batik_bedjo"),
+            Batik("Batik Parang Barong", "Motif Batik Parang Barong menggambarkan seekor barong, simbol dari keberanian dan kekuatan. Batik ini sering digunakan pada acara-acara adat dan memiliki warna-warna yang mencolok seperti merah, hitam, dan putih.", "batik_bedjo"),
+            Batik("Batik Tambal", "Batik Tambal memiliki ciri khas dengan motif yang menyerupai potongan kain yang disatukan kembali. Motif ini melambangkan kehidupan yang penuh liku-liku dan keunikan. Warna-warna yang umum digunakan adalah biru, coklat, dan hijau.", "batik_bedjo"),
 
-        // Set layout manager for each RecyclerView
-        recyclerViewHotFeature.layoutManager =
-            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        recyclerViewBatikPilihan.layoutManager =
-            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        recyclerViewEvents.layoutManager =
-            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+            )
+
+        // Create a ProductAdapter and pass the list of Batik objects
+        val productAdapter = ProductAdapter(batikList)
+
+        // Set the adapter for recyclerViewHotFeature
+        binding.recyclerView.adapter = productAdapter
+        // Set layout manager for recyclerViewHotFeature
+        binding.recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
         // Set click listeners for navigation
         binding.iconArticle.setOnClickListener {
