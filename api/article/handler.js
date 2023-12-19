@@ -49,13 +49,13 @@ class ArticleHandler {
     const userId = await verifyToken(token);
 
     const snapshot = await db
-      .collection("articleLike")
+      .collection("likedArticles")
       .where("articleId", "==", articleId)
       .where("userId", "==", userId)
       .get();
 
     if (snapshot.empty) {
-      await db.collection("articleLike").add({
+      await db.collection("likedArticles").add({
         articleId,
         userId,
       });
@@ -73,7 +73,7 @@ class ArticleHandler {
   async getLikeArticleHandler(request, h) {
     const { id } = request.params;
     const like = await db
-      .collection("articleLike")
+      .collection("likedArticles")
       .where("articleId", "==", id)
       .get();
     const count = like.size;
@@ -92,7 +92,7 @@ class ArticleHandler {
     const userId = await verifyToken(token);
 
     const snapshot = await db
-      .collection("articleLike")
+      .collection("likedArticles")
       .where("articleId", "==", id)
       .where("userId", "==", userId)
       .get();

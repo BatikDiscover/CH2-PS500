@@ -54,13 +54,13 @@ class EventHandler {
     const userId = await verifyToken(token);
 
     const snapshot = await db
-      .collection("saveEvent")
+      .collection("savedEvent")
       .where("eventId", "==", eventId)
       .where("userId", "==", userId)
       .get();
 
     if (snapshot.empty) {
-      await db.collection("saveEvent").add({
+      await db.collection("savedEvent").add({
         eventId,
         userId,
       });
@@ -78,7 +78,7 @@ class EventHandler {
     const token = request.headers.authorization;
     const userId = await verifyToken(token);
     const data = await db
-      .collection("saveEvent")
+      .collection("savedEvent")
       .where("userId", "==", userId)
       .get();
     const event = data.docs.map((doc) => doc.data());
@@ -97,7 +97,7 @@ class EventHandler {
     const userId = await verifyToken(token);
 
     const snapshot = await db
-      .collection("saveEvent")
+      .collection("savedEvent")
       .where("eventId", "==", id)
       .where("userId", "==", userId)
       .get();
