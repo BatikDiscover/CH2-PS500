@@ -11,18 +11,18 @@ const routes = (handler) => [
   },
   {
     method: "POST",
-    path: "/batik/{id}/like",
-    handler: handler.likeBatikHandler,
+    path: "/batik/{id}/save",
+    handler: handler.saveBatikHandler,
   },
   {
     method: "GET",
-    path: "/batik/{id}/like",
-    handler: handler.getLikedBatikHandler,
+    path: "/batik/save",
+    handler: handler.getSavedBatikHandler,
   },
   {
     method: "DELETE",
-    path: "/batik/{id}/like",
-    handler: handler.unLikeBatikHandler,
+    path: "/batik/{id}/save",
+    handler: handler.unSaveBatikHandler,
   },
 ];
 

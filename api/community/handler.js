@@ -41,10 +41,12 @@ class communityHandler {
       imageUrl,
     });
 
+    const postId = post.id;
+
     const response = h.response({
       status: "success",
       data: {
-        post,
+        postId,
       },
     });
     response.code(201);
@@ -132,10 +134,12 @@ class communityHandler {
       userId,
     });
 
+    const commentId = comment.id;
+
     const response = h.response({
       status: "success",
       data: {
-        comment,
+        commentId,
       },
     });
     response.code(201);
@@ -189,13 +193,13 @@ class communityHandler {
     const userId = await verifyToken(token);
 
     const snapshot = await db
-      .collection("postLike")
+      .collection("likedPost")
       .where("postId", "==", postId)
       .where("userId", "==", userId)
       .get();
 
     if (snapshot.empty) {
-      await db.collection("postLike").add({
+      await db.collection("likedPost").add({
         postId,
         userId,
       });
@@ -213,7 +217,7 @@ class communityHandler {
   async getLikePostHandler(request, h) {
     const { id } = request.params;
     const like = await db
-      .collection("postLike")
+      .collection("likedPost")
       .where("postId", "==", id)
       .get();
     const count = like.size;
@@ -232,7 +236,7 @@ class communityHandler {
     const userId = await verifyToken(token);
 
     const snapshot = await db
-      .collection("postLike")
+      .collection("likedPost")
       .where("postId", "==", id)
       .where("userId", "==", userId)
       .get();

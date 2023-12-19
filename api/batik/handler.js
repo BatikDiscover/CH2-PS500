@@ -1,8 +1,9 @@
 const { db } = require("../../config/firebase");
+const verifyToken = require("../token");
 
 class BatikHandler {
   async getBatikHandler(request, h) {
-    const data = await db.collection("BatikIndonesia").get();
+    const data = await db.collection("batik").get();
     const batik = data.docs.map((doc) => doc.data());
     return {
       status: "success",
@@ -22,19 +23,19 @@ class BatikHandler {
       },
     };
   }
-  async likeBatikHandler(request, h) {
+  async saveBatikHandler(request, h) {
     const { id: batikId } = request.params;
     const token = request.headers.authorization;
     const userId = await verifyToken(token);
 
     const snapshot = await db
-      .collection("likedBatik")
+      .collection("savedBatik")
       .where("batikId", "==", batikId)
       .where("userId", "==", userId)
       .get();
 
     if (snapshot.empty) {
-      await db.collection("likedBatik").add({
+      await db.collection("savedBatik").add({
         batikId,
         userId,
       });
@@ -48,11 +49,11 @@ class BatikHandler {
     }
   }
 
-  async getLikedBatikHandler(request, h) {
+  async getSavedBatikHandler(request, h) {
     const token = request.headers.authorization;
     const userId = await verifyToken(token);
     const data = await db
-      .collection("likedBatik")
+      .collection("savedBatik")
       .where("userId", "==", userId)
       .get();
     const batik = data.docs.map((doc) => doc.data());
@@ -65,13 +66,13 @@ class BatikHandler {
     return response;
   }
 
-  async unLikeBatikHandler(request) {
+  async unSaveBatikHandler(request) {
     const { id } = request.params;
     const token = request.headers.authorization;
     const userId = await verifyToken(token);
 
     const snapshot = await db
-      .collection("likedBatik")
+      .collection("savedBatik")
       .where("batikId", "==", id)
       .where("userId", "==", userId)
       .get();
