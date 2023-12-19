@@ -15,8 +15,8 @@ const article = require("./api/article");
 // plugin event
 const event = require("./api/event");
 
-// plugin model
-const model = require("./api/ml-connector");
+// plugin batik
+const batik = require("./api/batik");
 
 const init = async () => {
   const server = Hapi.server({
@@ -49,7 +49,7 @@ const init = async () => {
       plugin: event,
     },
     {
-      plugin: model,
+      plugin: batik,
     },
   ]);
 

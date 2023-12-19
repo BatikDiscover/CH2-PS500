@@ -21,7 +21,6 @@ class communityHandler {
     const date = new Date().toISOString();
 
     this._validator.validatePostingPayload(request.payload);
-    //this._validator.validateImageHeaders(image.hapi.headers);
 
     let imageUrl = "-";
     if (image !== undefined) {
