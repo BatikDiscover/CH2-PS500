@@ -39,8 +39,13 @@
     <string name="batik_pilihan">Batik Pilihan</string>
 
 
+
     <!-- Entry Activity -->
     <string name="heading1">Temukan Keragaman Batik Pada
         Aplikasi Batik Discover.</string>
     <string name="description">Dalam Setiap Klik, Saksikanlah Keragaman Batik yang Memukau. Explore, Experience, dan Temukan Keindahan yang Tersembunyi di Setiap Pola Batik.</string>
+
+    <string name="note">Deskripsi</string>
+    <string name="buat_posting">Buat Postingan</string>
+
 </resources>

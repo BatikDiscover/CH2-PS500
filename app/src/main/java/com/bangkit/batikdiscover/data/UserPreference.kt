@@ -1,4 +1,4 @@
-//package com.bangkit.batikdiscover.data
-//
-//class UserPreference {
-//}
+package com.bangkit.batikdiscover.data
+
+class UserPreference {
+}
