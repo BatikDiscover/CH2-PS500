@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "capstone-406813",
+  "private_key_id": "184dc7d0668fe1cd257d8e70ae4ca1f7acf10483",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDAey/lLbVYxecS\nYECqJzLB0bYYwMfeUjVJbmdS4oRaS4iwvQhYRuTSvyY15bmH5mGtOiJi6MdScZfA\nHRhPZMbqVTSOsjO2cx5XCd+Wt3XYyJyt9wRxzzpV/boJwaJqbGEy9TIoZx8uDnrv\nx1jfKXt13Pw34Ga8eg1l7bGBfu66YGAUB2bzdd7jWlbFFsHJIOEYRmlmhEO53iGz\ny8hnkPc1/IYP34CJFrlTpVpSbD12mJEZM5JhO0/f0jPgyopFtX/j7vqxakSBNvq0\n8fcVZcVaovsZXpf+5My8+4KyADDqynkR6fafG67hB9h/U697QVoOjI+BnhdHfsJc\nUjzJoDiRAgMBAAECggEAFuKOn0D//r4I6zZmedSPRFwaunaxTM2ZaFGoF0K3WcUB\nS4IuK9DCBAyWDnJxzKanlmEDFZ93k2XOFRlgepAQ1murBAxL+bVWNiMGYnUNnei8\nODLWZHGvDepM5DwRg3W/WL+uZv9bxa4TD88z0dSsySatFjen/2DDlwrbv/nHiIEX\noe0eSglyVXfzUu0yzxZiF4F1WC3x1DhnhmM8nDfwpGGgZjYsK4LIMk41ysfIb/9m\ncB7Tlrs/jpZd0/7ZMs8Wr86QRFQGA4PaZVIdkX/XYpIWw2pZcwxcNf01XzgEbpQl\n+D1LOETP3Vf5r7tH1V03hkq1F7Mmw5crpFw9MAPXwQKBgQD+wJBNj39RaRm+3zhj\n4SwBE5HngGUDbcfxZ5YU+qar1Xkw5Tts5ROJaR8WuIzwADgrhkI2cJ3A958ytPzD\nB8jnERQ7G3935xhOfp3cTlFcIWt+UwaEs5r6WdxhE8PIAGF9smCUfTAytL5PPkq/\nZRunq/Qzxq5o5tk77Jjhe20inwKBgQDBbIqKsxWvrnst4aVoBApjgSvv+PAjUHtB\nrzUTo/X2Vvn59/YAqU21y0yzRdhc+g/CG3GAB0HisM8+3AL2f1xAjD4Y2qN+jjsg\nm+WemfUa0d/rgn8T578R6m8vZyBt9KQ7n4+T411Jo1stiONd7gfWA+bVmyAX0K58\nmHeY7n6GzwKBgAD8whJq4fVw0Na6ir9oWgFPEBuzlbCjtkirPBustQSpeSTFXquX\nX7ICpEo0QOeVOKKCjLMlUJc03nsV1Hz1BMRQfqGUA7R1QtTbDMWT0CDpSD9fFwFg\nqNMbkg0WRIX76mTQUiuBKLSpmqs39JY1UBwgQHwK4xYo/uKKkjUdg1jFAoGAZ3md\nlB3CGD4Lf7wbNM4UkK7lxncyYHIJvlXw2xT33FUjXeqdHDV2cS7VVYKkAPl1vK3Z\nxlgbkx5rgIFKxHvV6mIcRkeQ9383enZsHLDYQwTL+b3SJd/wg7Ea0g0leC1MPulZ\nchBMM7zEZlO47uMMJh3oO5XFUXg+IEGgmZvc7FkCgYBkr598rgZuWow8nevkBR8X\nSF7lBo5pzzMXs2CW/D2ryRh1G6QFjQsjL0MYDBXqk2oqBpqGHn4gC9MEr28Ypb/k\ng29II00G3f8k/TwsxZZkr3R0Zf02uxs31H7dLbwh+l5XfqAmEhUh3ueb5Z6XRTnn\nZmbR2F0AkBfxGR2MbKigjQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "batik-discover@capstone-406813.iam.gserviceaccount.com",
+  "client_id": "117388231960368022204",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/batik-discover%40capstone-406813.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
