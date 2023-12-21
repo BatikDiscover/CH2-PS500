@@ -18,7 +18,8 @@ class communityHandler {
     const { title, content, image } = request.payload;
     const token = request.headers.authorization;
     const userId = await verifyToken(token);
-    const date = new Date().toISOString();
+    const date = new Date().toLocaleDateString();
+    const time = new Date().toLocaleTimeString();
 
     this._validator.validatePostingPayload(request.payload);
 
@@ -37,6 +38,7 @@ class communityHandler {
       title,
       content,
       date,
+      time,
       userId,
       imageUrl,
     });
@@ -127,12 +129,14 @@ class communityHandler {
     const token = request.headers.authorization;
     const userId = await verifyToken(token);
     const { content } = request.payload;
-    const date = new Date().toISOString();
+    const date = new Date().toLocaleDateString();
+    const time = new Date().toLocaleTimeString();
     this._validator.validateCommentPayload(request.payload);
 
     const comment = await db.collection("comments").add({
       content,
       date,
+      time,
       postId,
       userId,
     });
