@@ -4,7 +4,10 @@ const verifyToken = require("../token");
 class BatikHandler {
   async getBatikHandler(request, h) {
     const data = await db.collection("batik").get();
-    const batik = data.docs.map((doc) => doc.data());
+    const batik = data.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
     return {
       status: "success",
       data: {

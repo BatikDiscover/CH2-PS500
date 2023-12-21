@@ -14,6 +14,11 @@ const routes = (handler) => [
     path: "/logout",
     handler: handler.logoutHandler,
   },
+  {
+    method: "GET",
+    path: "/user/{id}",
+    handler: handler.getUserById,
+  },
 ];
 
 module.exports = routes;

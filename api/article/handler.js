@@ -4,7 +4,10 @@ class ArticleHandler {
   async getArticleHandler(request) {
     const { keyword } = request.query;
     const data = await db.collection("articles").get();
-    const articles = data.docs.map((doc) => doc.data());
+    const articles = data.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
 
     let filter = articles;
     if (keyword !== undefined) {

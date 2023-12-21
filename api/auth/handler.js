@@ -87,6 +87,17 @@ class AuthHandler {
       return h.response({ message: error.message }).code(400);
     }
   }
+  async getUserById(request, h) {
+    const { id } = request.params;
+    const data = await db.collection("users").doc(id).get();
+    const user = data.data();
+    return {
+      status: "success",
+      data: {
+        user,
+      },
+    };
+  }
 }
 
 module.exports = AuthHandler;

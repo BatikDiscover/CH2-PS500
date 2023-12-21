@@ -5,7 +5,10 @@ class EventHandler {
     const { date, location } = request.query;
 
     const data = await db.collection("events").get();
-    const events = data.docs.map((doc) => doc.data());
+    const events = data.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
 
     let filter = events;
     if (date !== undefined || location !== undefined) {

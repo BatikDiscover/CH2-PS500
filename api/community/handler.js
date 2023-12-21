@@ -57,7 +57,10 @@ class communityHandler {
     const { keyword } = request.query;
 
     const data = await db.collection("postings").get();
-    const postings = data.docs.map((doc) => doc.data());
+    const postings = data.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
 
     let filterPosting = postings;
     if (keyword !== undefined) {
@@ -153,7 +156,10 @@ class communityHandler {
       .collection("comments")
       .where("postId", "==", id)
       .get();
-    const comment = data.docs.map((doc) => doc.data());
+    const comment = data.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
     return {
       status: "success",
       data: {
