@@ -36,7 +36,7 @@
         app:tint="@color/white" />
 
     <TextView
-        android:id="@+id/judul"
+        android:id="@+id/ggwp"
         android:layout_width="215dp"
         android:layout_height="19dp"
         android:text="Romi Jatmiko"
@@ -48,10 +48,10 @@
         app:layout_constraintHorizontal_bias="0.301"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.069" />
+        app:layout_constraintVertical_bias="0.071" />
 
     <TextView
-        android:id="@+id/judul2"
+        android:id="@+id/date"
         android:layout_width="215dp"
         android:layout_height="19dp"
         android:text="13-02-2031"
@@ -66,7 +66,7 @@
         app:layout_constraintVertical_bias="0.151" />
 
     <TextView
-        android:id="@+id/kaka"
+        android:id="@+id/content"
         android:layout_width="359dp"
         android:layout_height="45dp"
         android:text="Interested in testing your proficiency in identifying standard Indonesian words? Give this straightforward quiz a shot!"

@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.notification -> {
-                // Handle notification menu item click
+                findNavController(R.id.nav_host_fragment_activity_main).navigate(R.id.navigation_notif)
                 true
             }
 
@@ -92,7 +92,6 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
                 true
             }
-            // Add other menu item handling here if needed
             else -> super.onOptionsItemSelected(item)
         }
     }

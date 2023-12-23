@@ -71,7 +71,7 @@ fun uriToFile(imageUri: Uri, context: Context): File {
     return myFile
 }
 
-fun File.reduceFileImage(): File {
+fun File.reduceFileImage(requireContext: Context): File {
     val file = this
     val bitmap = BitmapFactory.decodeFile(file.path).getRotatedBitmap(file)
     var compressQuality = 100

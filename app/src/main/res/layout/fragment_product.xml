@@ -45,8 +45,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="686dp"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:spanCount="3"
-                tools:listitem="@layout/item_batik"/>
+                app:layout_constraintTop_toTopOf="parent"
+                app:spanCount="2"
+                tools:listitem="@layout/item_batik" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

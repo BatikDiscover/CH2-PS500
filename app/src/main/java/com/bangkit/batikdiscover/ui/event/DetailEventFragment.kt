@@ -1,6 +1,5 @@
-// ProductDetailFragment.kt
-
-package com.bangkit.batikdiscover.ui.product
+// DetailEventFragment.kt
+package com.bangkit.batikdiscover.ui.event
 
 import android.os.Bundle
 import android.util.Log
@@ -10,14 +9,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.bangkit.batikdiscover.data.DataRepository
-import com.bangkit.batikdiscover.databinding.FragmentProductDetailBinding
+import com.bangkit.batikdiscover.databinding.FragmentDetailEventBinding
 import com.bumptech.glide.Glide
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.launch
 
-class ProductDetailFragment : Fragment() {
+class DetailEventFragment : Fragment() {
 
-    private var _binding: FragmentProductDetailBinding? = null
+    private var _binding: FragmentDetailEventBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var dataRepository: DataRepository
@@ -26,7 +25,7 @@ class ProductDetailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentProductDetailBinding.inflate(inflater, container, false)
+        _binding = FragmentDetailEventBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         dataRepository = DataRepository(requireContext())
@@ -34,31 +33,31 @@ class ProductDetailFragment : Fragment() {
         // Retrieve id from arguments
         val id = arguments?.getString("id")
 
-        // Load product details
+        // Load event details
         lifecycleScope.launch {
             try {
                 val userToken = dataRepository.getUserToken().firstOrNull()
                 if (userToken != null && id != null) {
-                    val batikDetailItem = dataRepository.getBatikById(userToken, id)
+                    val eventDetailItem = dataRepository.getEventById(userToken, id)
 
-                    binding.textView10.text = batikDetailItem?.name
-                    binding.textView5.text = batikDetailItem?.origin
-                    binding.textView12.text = batikDetailItem?.meaning
-                    binding.textView18.text = batikDetailItem?.pattern
+                    binding.name.text = eventDetailItem?.name
+                    binding.date.text = "Date: ${eventDetailItem?.date}"
+                    binding.location.text = "Location: ${eventDetailItem?.location}"
+                    binding.textView12.text = eventDetailItem?.description
 
-                    Glide.with(requireContext())
-                        .load(batikDetailItem?.imageUrl)
-                        .into(binding.imageView8)
+                     Glide.with(requireContext())
+                         .load(eventDetailItem?.imageEventItem)
+                         .into(binding.imageView8)
 
                 } else {
                     // Handle the case where userToken or id is null
                     // You might want to navigate the user to the login screen or show an error message
-                    Log.e("ProductDetailFragment", "UserToken or id is null")
+                    Log.e("DetailEventFragment", "UserToken or id is null")
                 }
             } catch (e: Exception) {
                 // Handle the error, e.g., show a toast or log
                 e.printStackTrace()
-                Log.e("ProductDetailFragment", "Error retrieving batik details", e)
+                Log.e("DetailEventFragment", "Error retrieving event details", e)
             }
         }
 

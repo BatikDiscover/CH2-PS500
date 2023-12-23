@@ -12,12 +12,20 @@
     <fragment
         android:id="@+id/navigation_community"
         android:name="com.bangkit.batikdiscover.ui.community.CommunityFragment"
-        android:label="@string/title_comunity" />
+        android:label="@string/title_comunity" >
+    <action
+        android:id="@+id/action_community"
+        app:destination="@id/navigation_detail_community" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_product"
         android:name="com.bangkit.batikdiscover.ui.product.ProductFragment"
         android:label="@string/title_product"
-        tools:layout="@layout/fragment_product" />
+        tools:layout="@layout/fragment_product">
+    <action
+        android:id="@+id/action_productFragment_to_productDetailFragment"
+        app:destination="@id/navigation_product_detail" />
+    </fragment>
 
 
     <fragment
@@ -29,25 +37,61 @@
         android:name="com.bangkit.batikdiscover.ui.profile.ProfileFragment"
         android:label="@string/title_profile" />
 
-
+    <fragment
+        android:id="@+id/navigation_notif"
+        android:name="com.bangkit.batikdiscover.ui.notifications.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notification" />
     <fragment
         android:id="@+id/navigation_artikel"
         android:name="com.bangkit.batikdiscover.ui.article.ArticleFragment"
         android:label="@string/article"
-        tools:layout="@layout/fragment_article" />
+        tools:layout="@layout/fragment_article" >
+    <action
+        android:id="@+id/action_artikel"
+        app:destination="@id/navigation_detail_artikel" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_detail_artikel"
+        android:name="com.bangkit.batikdiscover.ui.article.ArticleDetailFragment"
+        android:label="Detail Artikel"
+        tools:layout="@layout/fragment_detail_artikel" />
     <fragment
         android:id="@+id/navigtaion_events"
         android:name="com.bangkit.batikdiscover.ui.event.EventFragment"
+        android:label="@string/events"
+        tools:layout="@layout/fragment_event">
+    <action
+        android:id="@+id/action_event"
+        app:destination="@id/navigation_event_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_event_detail"
+        android:name="com.bangkit.batikdiscover.ui.event.DetailEventFragment"
         android:label="@string/events"
         tools:layout="@layout/fragment_event" />
     <fragment
         android:id="@+id/navigation_scan_detail"
         android:name="com.bangkit.batikdiscover.ui.scan.DetailScanFragment"
         android:label="@string/scan_detail"
-        tools:layout="@layout/fragment_result_scan" />
+        tools:layout="@layout/fragment_result_scan" >
+    <action
+        android:id="@+id/action_hasil_scan"
+        app:destination="@id/navigation_product_detail" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_product_detail"
         android:name="com.bangkit.batikdiscover.ui.product.ProductDetailFragment"
         android:label="@string/product_detail"
         tools:layout="@layout/fragment_product_detail" />
+    <fragment
+        android:id="@+id/navigation_detail_community"
+        android:name="com.bangkit.batikdiscover.ui.community.CommunityDetailFragment"
+        android:label="Detail Community"
+        tools:layout="@layout/fragment_community_detail" />
+    <fragment
+        android:id="@+id/navigation_add_fragment"
+        android:name="com.bangkit.batikdiscover.ui.community.CommunityDetailFragment"
+        android:label="Add Community"
+        tools:layout="@layout/fragment_add_community" />
 </navigation>

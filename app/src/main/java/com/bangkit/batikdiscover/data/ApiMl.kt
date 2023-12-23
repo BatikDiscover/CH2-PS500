@@ -7,8 +7,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-object ApiConfig {
-    private val BASE_URL: String = " https://batik-discover-backend-dot-capstone-406813.et.r.appspot.com/"
+object ApiMl {
+    private val BASE_URL: String = "https://batik-discover-predict-dot-capstone-406813.et.r.appspot.com/"
 
     fun getApiService(token: String? = null): ApiService {
         val client = OkHttpClient.Builder().apply {

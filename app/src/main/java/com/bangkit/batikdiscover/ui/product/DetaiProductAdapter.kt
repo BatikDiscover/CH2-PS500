@@ -1,4 +1,4 @@
 package com.bangkit.batikdiscover.ui.product
 
-class ProductDetailViewModel {
+class DetaiProductAdapter {
 }

@@ -3,15 +3,24 @@ package com.bangkit.batikdiscover.ui.login
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import com.bangkit.batikdiscover.MainActivity
 import com.bangkit.batikdiscover.databinding.ActivityEntryBinding
+import com.bangkit.batikdiscover.data.DataRepository
+import kotlinx.coroutines.launch
 
 class EntryActivity : AppCompatActivity() {
     private lateinit var binding: ActivityEntryBinding
+    private lateinit var dataRepository: DataRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityEntryBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        dataRepository = DataRepository(this)
+
+        checkUserLoggedIn()
 
         binding.button.setOnClickListener {
             // Handle button click to navigate to LoginActivity
@@ -24,5 +33,23 @@ class EntryActivity : AppCompatActivity() {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    private fun checkUserLoggedIn() {
+        val userTokenFlow = dataRepository.getUserToken()
+
+        lifecycleScope.launch {
+            userTokenFlow.collect { token ->
+                if (!token.isNullOrBlank()) {
+                    startMainActivity()
+                }
+            }
+        }
+    }
+
+    private fun startMainActivity() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

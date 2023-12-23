@@ -1,0 +1,69 @@
+<!-- res/layout/item_event.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/iconEvents"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/circle_background"
+        android:backgroundTint="@color/red"
+        android:padding="10dp"
+        android:src="@drawable/ic_profile"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.008"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.016" />
+
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="279dp"
+        android:layout_height="17dp"
+        android:text="Romi Jatmiko"
+        android:textAlignment="textStart"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toEndOf="@+id/iconEvents"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/isi_komentar"
+        android:layout_width="280dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="36dp"
+        android:text="isi_komentar"
+        android:textAlignment="textStart"
+        android:textSize="10dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toEndOf="@+id/iconEvents"
+        app:layout_constraintTop_toBottomOf="@+id/nama" />
+
+    <TextView
+        android:id="@+id/tanggal_notif2"
+        android:layout_width="270dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="4dp"
+        android:text="10-12-2024"
+        android:textAlignment="textStart"
+        android:textSize="10dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toEndOf="@+id/iconEvents"
+        app:layout_constraintTop_toBottomOf="@+id/nama" />
+</androidx.constraintlayout.widget.ConstraintLayout>
